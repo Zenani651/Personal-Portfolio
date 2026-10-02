@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Zenani Masumpa | Junior Software Developer</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <div class="ambient ambient-left"></div>
+  <div class="ambient ambient-right"></div>
+  <div class="ambient ambient-top"></div>
+
+  <div class="portfolio-frame">
+    <nav id="navbar" class="navbar">
+      <a href="#home" class="brand" data-nav="home">Portfolio<span>.</span></a>
+      <div class="desktop-nav" id="desktopNav"></div>
+      <div class="mobile-nav-toggle">
+        <button id="menuToggle" aria-label="Toggle Navigation Menu" class="icon-button"><span id="menuIcon">☰</span></button>
+      </div>
+      <div id="mobileDrawer" class="mobile-drawer"></div>
+    </nav>
+
+    <main>
+      <section id="home" class="hero section">
+        <div class="hero-grid">
+          <div class="hero-copy">
+            <div>
+              <h3>Hello, My name is</h3>
+              <h1>Zenani Masumpa</h1>
+              <h2><span>And I'm a</span> <span class="accent typing-text"></span><span class="cursor">|</span></h2>
+            </div>
+            <p class="hero-bio">Passionate junior developer focused on turning ideas into practical and engaging digital experiences. I create clean, responsive, and user-friendly applications while continuously developing my technical skills and learning new technologies. I enjoy solving problems, taking on new challenges, and building solutions that provide real value to users.
+</p>
+            <div class="socials" id="socials"></div>
+            <div class="hero-cta"><a class="primary-btn" href="documents/Zenani__Masumpa CV..pdf" download="Vuyelwa_Mafa_CV.pdf">Download CV</a></div>
+          </div>
+          <div class="portrait-wrap">
+            <div class="hex-glow"></div>
+            <div class="hex-frame"><img src="images/zenani1 (1).jpeg" alt="Vuyelwa Mafa"></div>
+          </div>
+        </div>
+      </section>
+
+      <section id="about" class="section bordered">
+        <div class="section-heading">
+          <h2>About <span class="accent">Me</span></h2><div class="heading-line"></div>
+          <p>Get to know more about my background, technical expertise, and career journey.</p>
+        </div>
+        <div class="about-grid">
+          <div class="constellation-card" id="constellationCard">
+            <canvas id="constellationCanvas" aria-label="Interactive pink constellation. Drag the glowing points to reshape it."></canvas>
+            <div class="constellation-glow"></div>
+            <p class="constellation-hint">Drag the points to explore</p>
+          </div>
+          <div class="about-copy">
+            <h3>A Dedicated <span class="accent">Junior Software Developer</span> Based in Randburg Gauteng, South Africa</h3>
+            <p>Information Technology graduate from Central University of Technology (Diploma in Information Technology) with hands-on experience in software development. Skilled in building applications using ASP.Net Core and C#, Flutter and Dart, SQL and Firebase, and HTML, CSS, and JavaScript. Focused on clear results, dependable delivery, and continuous learning, with a strong interest in practical problem-solving and expanding technical knowledge.</p>
+            <div class="highlights">
+              <div>✓ <span>Diploma in Information Technology</span></div>
+              <div>✓ <span>Web, Mobile &amp; Backend Development</span></div>
+            </div>
+          </div>
+        </div>
+        <div class="timeline-wrap">
+          <h3 class="timeline-title">🎓 <span>Work Experience Timeline</span></h3>
+          <div class="timeline" id="timeline"></div>
+        </div>
+      </section>
+
+      <section id="skills" class="section bordered">
+        <div class="section-heading">
+          <h2>My <span class="accent">Skills</span></h2><div class="heading-line"></div>
+          <p>Technologies and core competencies I specialize in to build modern, performant web applications.</p>
+        </div>
+        <div class="skills-split">
+          <div class="technical-skills-panel">
+            <h3 class="skills-subheading"><span>Technical</span> Skills</h3>
+            <div class="technical-skills-grid" id="technicalSkillsGrid"></div>
+          </div>
+          <div class="skills-divider" aria-hidden="true"></div>
+          <div class="soft-skills-panel">
+            <h3 class="skills-subheading"><span>Soft</span> Skills</h3>
+            <div class="soft-skills-card" id="softSkillsCard"></div>
+          </div>
+        </div>
+      </section>
+
+      <section id="portfolio" class="section bordered">
+        <div class="section-heading">
+          <h2>Latest <span class="accent">Projects</span></h2><div class="heading-line"></div>
+          <p>Explore a selection of recent web applications, UI designs, and client projects.</p>
+        </div>
+        <div class="filters" id="projectFilters"></div>
+        <div class="projects-grid" id="projectsGrid"></div>
+      </section>
+
+      <section id="contact" class="section bordered">
+        <div class="section-heading">
+          <h2>Contact <span class="accent">Me!</span></h2><div class="heading-line"></div>
+          <p>Have a project idea, opportunity, or question? Feel free to reach out anytime!</p>
+        </div>
+        <div class="contact-grid">
+          <div class="contact-info">
+            <a class="contact-card" href="mailto:vuyelwamafa@gmail.com"><div class="contact-icon">✉</div><div><h4>Email Me</h4><p>zenanimasumpa@gmail.com</p></div></a>
+            <a class="contact-card" href="tel:+27 63 926 2851"><div class="contact-icon">☎</div><div><h4>Call Me</h4><p>+27 65 583 4191</p></div></a>
+            <div class="contact-card"><div class="contact-icon">⌖</div><div><h4>Location</h4><p>Randburg, SA</p></div></div>
+            <div class="availability"><span><i></i>Available for Freelance &amp; Full-time Roles</span><p>Typical response time: Within 24 hours.</p></div>
+          </div>
+          <div class="contact-form-card">
+            <div id="successMessage" class="success-message hidden"><div class="success-icon">✓</div><div><h4>WhatsApp opened!</h4><p>Please press Send in WhatsApp to deliver your message to Zenani.</p></div></div>
+            <form id="contactForm">
+              <div class="form-row">
+                <div><label for="fullName">Full Name *</label><input id="fullName" name="fullName" required placeholder="e.g. Alex Morgan"></div>
+                <div><label for="email">Email Address *</label><input id="email" name="email" type="email" required placeholder="e.g. alex@example.com"></div>
+              </div>
+              <div class="form-row">
+                <div><label for="phone">Mobile Number</label><input id="phone" name="phone" type="tel" placeholder="e.g. +1 555 019 2831"></div>
+                <div><label for="subject">Email Subject</label><input id="subject" name="subject" placeholder="e.g. Web Development Inquiry"></div>
+              </div>
+              <div><label for="message">Your Message *</label><textarea id="message" name="message" rows="5" required placeholder="Write your project details or message here..."></textarea></div>
+              <button class="primary-btn form-submit" type="submit"><span id="submitText">Send via WhatsApp</span><span>➤</span></button>
+            </form>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <p>Copyright © <span id="year"></span> by <strong>Z Masumpa</strong> | All Rights Reserved.</p>
+      <button id="backTop" class="back-top" title="Scroll to Top">↑</button>
+    </footer>
+  </div>
+
+  <div id="cvModal" class="modal hidden" role="dialog" aria-modal="true">
+    <div class="modal-panel">
+      <div class="modal-header">
+        <div class="modal-heading"><div class="modal-icon">▤</div><div><h3>John Kendric — Curriculum Vitae</h3><p>Frontend Developer Portfolio Resume</p></div></div>
+        <button class="close-modal" data-close-modal>×</button>
+      </div>
+      <div class="modal-body">
+        <div class="cv-summary"><div><h1>John Kendric</h1><p class="accent">Frontend Developer</p></div><div class="cv-contact"><p>📍 San Francisco, CA</p><p>✉ john.kendric@devportfolio.com</p><p>☎ +1 (555) 234-5678</p></div><p class="full-width">I am a passionate Frontend Developer with over 5 years of experience crafting modern, responsive, and user-centric web applications. Specializing in React, TypeScript, Tailwind CSS, and sleek UI animations, I transform complex ideas into interactive visual realities.</p></div>
+        <div class="cv-section"><h3>💼 <span>Professional Experience</span></h3><div id="cvExperience"></div></div>
+        <div class="cv-section"><h3>🏆 <span>Technical Skills &amp; Core Competencies</span></h3><div id="cvSkills" class="cv-skills"></div></div>
+        <div class="cv-section"><h3>🎓 <span>Education &amp; Certifications</span></h3><div class="cv-card"><p class="bold">B.S. in Computer Science &amp; Interactive Media</p><p class="muted">California State University | Graduated 2019</p><p>Meta Certified Frontend Developer | AWS Certified Cloud Practitioner</p></div></div>
+      </div>
+      <div class="modal-footer"><div class="modal-actions"><button id="copyCv" class="secondary-btn">⧉ Copy Resume Text</button><button id="printCv" class="secondary-btn">🖨 Print Resume</button></div><a class="primary-btn hire-btn" href="mailto:john.kendric@devportfolio.com?subject=Interview%20Inquiry%20-%20John%20Kendric">⇩ Hire John Kendric</a></div>
+    </div>
+  </div>
+
+  <div id="projectModal" class="modal hidden" role="dialog" aria-modal="true">
+    <div class="modal-panel">
+      <div class="modal-header"><div class="modal-heading"><span id="projectCategory" class="badge"></span><h3 id="projectModalTitle"></h3></div><button class="close-modal" data-close-modal>×</button></div>
+      <div class="modal-body project-modal-body">
+        <div class="project-banner project-video-wrap">
+          <video id="projectVideo" class="hidden" controls playsinline preload="metadata"></video>
+          <div id="projectVideoPlaceholder" class="video-placeholder">
+            <div class="video-placeholder-icon">▶</div>
+            <h3 id="videoPlaceholderTitle">Project video coming soon</h3>
+            <p>A demonstration video will be added here.</p>
+          </div>
+        </div>
+        <div><h2 id="projectModalHeading"></h2><p id="projectModalDescription"></p></div>
+        <div><h4>Key Architectural Highlights</h4><div class="feature-grid"><div>✓ Responsive &amp; Fluid Layout System</div><div>✓ Modern React State Architecture</div><div>✓ Optimized Bundle &amp; Fast Asset Loading</div><div>✓ Accessibility &amp; Clean Semantic Markup</div></div></div>
+        <div><h4>🏷 Technologies Used</h4><div id="projectTags" class="tags"></div></div>
+      </div>
+      <div class="modal-footer project-footer"><div></div><div class="modal-actions" id="projectLinks"></div></div>
+    </div>
+  </div>
+
+  <script src="js/script.js"></script>
+</body>
+</html>
