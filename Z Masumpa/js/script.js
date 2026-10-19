@@ -16,15 +16,14 @@ const SKILLS_DATA=[
 const SOFT_SKILLS_DATA=["Problem Solving","Communication","Teamwork & Collaboration","Time Management","Critical Thinking","Adaptability","Attention to Detail","Task Prioritization","Fast Learner"];
 
 const PROJECTS_DATA=[
-{id:"proj-1",title:"Chat App",category:"Mobile App",image:"https://picsum.photos/seed/cutnavigation/800/600",description:"A Flutter application that helps students and staff navigate campus and access useful campus services.",longDescription:"Developed as an innovative indoor campus navigation solution with location search, walking directions, schedule integration, voice assistance, document sharing, user profiles, and Firebase-powered features.",tags:["Flutter","Dart","Firebase","Google Maps"],videoUrl:"videos/cut-campus-navigation.mp4",githubUrl:""},
-{id:"proj-2",title:"Student Management System",category:"Backend",image:"https://picsum.photos/seed/itsmplatform/800/600",description:"A structured IT service-management API for organising support requests, categories, and service-desk data.",longDescription:"Built with a layered ASP.NET Core Web API architecture using C#, Entity Framework Core, SQL Server, migrations, controllers, and API documentation.",tags:["C#","ASP.NET Core","EF Core","SQL Server"],videoUrl:"videos/itsm-platform.mp4",githubUrl:""},
-{id:"proj-3",title:"Student Management System",category:"Web App",image:"https://picsum.photos/seed/companyintranet/800/600",description:"A responsive internal company portal for communication, resources, quick actions, and role-based access.",longDescription:"Designed as a modern company intranet with authentication, database integration, role management, responsive navigation, and accessible employee resources.",tags:["ASP.NET Core","JavaScript","SQL Server","Responsive UI"],videoUrl:"videos/company-intranet.mp4",githubUrl:""},
+{id:"proj-1",title:"Ai Chatbot",category:"Web App",image:"https://picsum.photos/seed/cutnavigation/800/600",description:" ",longDescription:"Wellness Chatbot ",tags:["Meta AI",],demoUrl:"https://capeitinitiative.sharepoint.com/:u:/s/Demand32026/IQCKGnofBc7CRpmq4XKjFDfUAWIFW4pYUReHhFSrVWUiEU0?e=a0y1oZ",githubUrl:"https://github.com/Zenani651/AI-Chatbot.git"},
+{id:"proj-2",title:"Sentiment Analysis tool",category:"Web App",image:"https://picsum.photos/seed/itsmplatform/800/600",description:" ",longDescription:"A client-side dashboard that analyses customer reviews for sentiment, emotions, topics and trends, then turns them into actionable reports. ",tags:["Claude",],videoUrl:"",demoUrl:"https://capeitinitiative.sharepoint.com/:u:/s/Demand32026/IQBufXFiCF75TqTGRPOjuQx1AVRqbFJgDhbAbHWUxOccYr8?e=4bI9FV",githubUrl:"https://github.com/Zenani651/edupredict.git"},
+{id:"proj-3",title:"Content Generator",category:"Web App",image:"https://picsum.photos/seed/companyintranet/800/600",description:" ",longDescription:"CareerCraft is a mobile-friendly web app that helps job seekers build professional CVs, write cover letters, and match their CV to a job ad. It includes template previews, categorised skills, an ATS check, a prompt library, and an AI career assistant that works only from the user’s own details.",tags:["Claude",],videoUrl:"",demoUrl:"https://capeitinitiative.sharepoint.com/:u:/s/Demand32026/IQCEk8EWMuMWTLpsE6vNBKnbAZh2vMGtgrikPhFV5pDtdP8?e=cEj8iI",githubUrl:"https://github.com/Zenani651/insightpulse-dashboard.git"},
+{id:"proj-4",title:"End-to-end AI solution",category:"Web App",image:"https://picsum.photos/seed/cutnavigation/800/600",description:" ",longDescription:"EduPredict: a browser-based dashboard that predicts learner marks, flags students at risk and recommends support. Prototype built with AI assistance.",tags:["Claude"],videoUrl:"",demoUrl:"https://capeitinitiative.sharepoint.com/:u:/s/Demand32026/IQCECVYzWgjlSL-5Qw2ho8_VAZ41Eq_qCHqCrOi16MBqCeY?e=cVf7Rs",githubUrl:"https://github.com/Zenani651/edupredict.git"},
 ];
 
 const EXPERIENCE_DATA=[
-{year:"2023 - Present",role:"Senior Frontend Engineer",company:"Apex Digital Solutions",description:"Lead frontend architect driving React & TypeScript component library migration, optimizing web vitals by 40%, and mentoring junior developers."},
-{year:"2021 - 2023",role:"Frontend UI/UX Specialist",company:"Vortex Creative Agency",description:"Designed and developed 20+ responsive web applications for international clients with rich CSS animations and custom design systems."},
-{year:"2019 - 2021",role:"Junior Web Developer",company:"Nova Web Tech",description:"Built interactive landing pages, integrated REST APIs, and ensured cross-browser compatibility across mobile, tablet, and desktop devices."}
+
 ];
 
 const navLinks=[["Home","home"],["About","about"],["Skills","skills"],["Portfolio","portfolio"],["Contact","contact"]];
@@ -48,7 +47,7 @@ document.addEventListener("click",e=>{
 });
 renderNav();
 
-const socials=[["🕻","Call +27 63 926 2851","phone"],["✉","Email vuyelwamafa@gmail.com","email"],["in","Open Vuyelwa Mafa's LinkedIn profile","linkedin"],["⌘","Open Vuyelwa Mafa's GitHub profile","github"]];
+const socials=[["🕻","Call +27 65 583 4191","phone"],["✉","Email zenanimasumpa@gmail.com","email"],["in","Open Zenani Masumpa's LinkedIn profile","linkedin"],["⌘","Open Zenani Masumpa's GitHub profile","github"]];
 document.getElementById("socials").innerHTML=socials.map(([icon,label,key])=>{
   const opensNewTab=key==="linkedin"||key==="github";
   return `<a href="${PERSONAL_INFO.socials[key]}"${opensNewTab?' target="_blank" rel="noopener noreferrer"':""} aria-label="${label}" title="${label}">${icon}</a>`;
@@ -267,7 +266,7 @@ form.addEventListener("submit",e=>{
   if(!form.checkValidity()){form.reportValidity();return}
   const details=new FormData(form);
   const whatsappMessage=[
-    "Hello Vuyelwa, I contacted you through your portfolio.",
+    "Hello Zenani, I contacted you through your portfolio.",
     "",
     `Name: ${details.get("fullName")}`,
     `Email: ${details.get("email")}`,
@@ -277,7 +276,7 @@ form.addEventListener("submit",e=>{
     "Message:",
     details.get("message")
   ].filter(line=>line!==null).join("\n");
-  const whatsappUrl=`https://wa.me/27639262851?text=${encodeURIComponent(whatsappMessage)}`;
+  const whatsappUrl=`https://wa.me/27655834191?text=${encodeURIComponent(whatsappMessage)}`;
   window.open(whatsappUrl,"_blank","noopener,noreferrer");
   document.getElementById("successMessage").classList.remove("hidden");
   setTimeout(()=>document.getElementById("successMessage").classList.add("hidden"),7000);
